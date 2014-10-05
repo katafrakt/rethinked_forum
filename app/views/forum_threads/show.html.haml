@@ -1,0 +1,4 @@
+%h4= @thread.title
+
+- @posts.each do |post|
+	= render partial: 'post', locals: { post: post }

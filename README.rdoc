@@ -1,0 +1,8 @@
+== What?
+
+This is a forum (think phpBB or IPB) written in Rails on top of RethinkDB using awesome NoBrainer ORM.
+
+== Why?
+
+I always wanted to write a forum app. I just never had a project that would require it. So when I decided
+to play with NoBrainer a bit I decided to follow my dream and write one as my training project.

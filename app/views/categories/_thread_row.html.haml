@@ -1,0 +1,11 @@
+.row
+	.column.medium-12
+		.row
+			.column.medium-8
+				= link_to thread.title, thread
+			.column.medium-4
+				Author:
+				= thread.user.name
+				%br/
+				Posts:
+				= thread.post_count

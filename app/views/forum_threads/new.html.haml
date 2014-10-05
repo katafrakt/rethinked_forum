@@ -1,0 +1,6 @@
+= simple_form_for @thread, url: category_forum_threads_path(@category) do |f|
+	= f.input :title
+	= f.simple_fields_for :posts do |ff|
+		= ff.input :content, as: :text, input_html: { value: flash[:post_content] }
+
+	= f.button :submit
