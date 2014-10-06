@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'posts/edit'
+
   resources :posts
 
   devise_for :users
@@ -8,7 +10,9 @@ Rails.application.routes.draw do
   end
 
 
-  resources :forum_threads, path: 'threads', except: [:new, :create]
+  resources :forum_threads, path: 'threads', except: [:new, :create] do
+    resources :posts, only: [:create, :new]
+  end
 
   root to: "categories#index"
 

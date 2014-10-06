@@ -2,3 +2,8 @@
 
 - @posts.each do |post|
 	= render partial: 'post', locals: { post: post }
+
+= simple_form_for :post, url: forum_thread_posts_path(@thread) do |f|
+	= f.input :content
+
+	= f.button :submit
