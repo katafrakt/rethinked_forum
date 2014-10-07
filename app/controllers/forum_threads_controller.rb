@@ -32,6 +32,6 @@ class ForumThreadsController < ApplicationController
 
 	private
 	def safe_params
-		params.require(:forum_thread).permit(:title)
+		params.require(:forum_thread).permit(:title, :tag_list)
 	end
 end

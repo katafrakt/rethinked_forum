@@ -1,0 +1,2 @@
+module ThreadTagsControllerHelper
+end

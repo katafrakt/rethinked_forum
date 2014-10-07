@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   resources :forum_threads, path: 'threads', except: [:new, :create] do
     resources :posts, only: [:create, :new]
+    collection do
+      get 'tags/:tag' => 'thread_tags#show', as: 'tags'
+    end
   end
 
   root to: "categories#index"

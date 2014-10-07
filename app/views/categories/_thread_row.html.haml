@@ -2,7 +2,9 @@
 	.column.medium-12
 		.row
 			.column.medium-8
-				= link_to thread.title, thread
+				%h5= link_to thread.title, thread
+				- thread.tags.each do |tag|
+					%span.secondary.round.label= link_to tag, tags_forum_threads_path(tag)
 			.column.medium-4
 				Author:
 				= thread.user.name
