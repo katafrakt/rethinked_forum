@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/katafrakt/carrierwave-nobrainer.git
+  revision: 11c244a6aa2268c8a6b8fc46bed7b2e44ed70df9
+  specs:
+    carrierwave-nobrainer (0.0.9)
+      nobrainer (>= 0.17.0)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 1d8890b77372b9c4fd3ec8e9b4963d76774ed33c
   branch: lm-rails-4-2
@@ -201,6 +208,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   carrierwave
+  carrierwave-nobrainer!
   coffee-rails (~> 4.0.0)
   devise!
   foundation-rails

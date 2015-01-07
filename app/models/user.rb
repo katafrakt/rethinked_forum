@@ -1,7 +1,7 @@
 class User
   include NoBrainer::Document
   include NoBrainer::Document::Timestamps
-  extend Carrierwave::NoBrainer
+  extend CarrierWave::NoBrainer
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

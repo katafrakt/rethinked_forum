@@ -29,6 +29,7 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'carrierwave-nobrainer', github: 'katafrakt/carrierwave-nobrainer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
