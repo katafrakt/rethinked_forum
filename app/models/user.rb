@@ -1,6 +1,7 @@
 class User
   include NoBrainer::Document
   include NoBrainer::Document::Timestamps
+  extend Carrierwave::NoBrainer
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -11,6 +12,8 @@ class User
   has_many :posts
 
   field :name, type: String, required: true
+  field :avatar, type: String
+  mount_uploader :avatar, AvatarUploader
 
   ## Database authenticatable
   field :email,              :type => String, :default => ""
@@ -40,5 +43,4 @@ class User
   # field :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts
   # field :unlock_token,    :type => String # Only if unlock strategy is :email or :both
   # field :locked_at,       :type => Time
-
 end

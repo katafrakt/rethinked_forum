@@ -1,5 +1,7 @@
 .row
 	.column.medium-3
 		= post.user.name
+		%br/
+		= image_tag post.user.avatar.url
 	.column.medium-9
 		= post.content

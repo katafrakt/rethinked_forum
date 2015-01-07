@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :posts
 
   devise_for :users
+  resources :users, except: [:new, :create]
   resources :categories do
     resources :forum_threads, path: 'threads', only: [:new, :create]
   end
